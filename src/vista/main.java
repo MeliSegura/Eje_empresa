@@ -4,19 +4,26 @@
  */
 package vista;
 
+import modelo.Conexion;
+
 /**
  *
  * @author Usuario
  */
-public class main {
+public class main{
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        frm_personas frm = new frm_personas();
-        frm.show();
+        /* frm_personas frm = new frm_personas();
+        frm.show();*/
+        
+        Conexion cn = new Conexion();
+        cn.abrir_conexion();
+        cn.cerrar_conexion();
+        
     }
     
 }
