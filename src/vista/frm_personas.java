@@ -3,25 +3,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vista;
-import javax.swing.table.DefaultTableModel;
+//import javax.swing.table.DefaultTableModel;
+
+import modelo.Cliente;
+
 /**
  *
  * @author Usuario
  */
 public class frm_personas extends javax.swing.JFrame {
 Cliente cliente;
-DefaultTableModel tbl_modelo; // tbl_modelo sirve para llenar tbl_clientes (control)
+//DefaultTableModel tbl_modelo; // tbl_modelo sirve para llenar tbl_clientes (control)
     /**
      * Creates new form frm_personas
      */
     public frm_personas() {
         initComponents();
+        
         cliente = new Cliente();
-        tbl_modelo = new DefaultTableModel();
+        /*tbl_modelo = new DefaultTableModel();
         //crear las columnas, modelo = tbl_clientes
         String encabezado[]={"Nit","Nombres","Apellidos","Direccion","Telefonos","Nacimiento"};
         tbl_modelo.setColumnIdentifiers(encabezado);
-        tbl_clientes.setModel(tbl_modelo);
+        tbl_clientes.setModel(tbl_modelo);*/
     }
 
     /**
@@ -216,8 +220,10 @@ DefaultTableModel tbl_modelo; // tbl_modelo sirve para llenar tbl_clientes (cont
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_crearActionPerformed
+        cliente = new Cliente(0, txt_nit.getText(),txt_nombres.getText(), txt_apellidos.getText(), txt_direccion.getText(), txt_telefono.getText(), txt_fecha_nacimiento.getText());
+        cliente.crear();
         // TODO add your handling code here:
-        cliente.setNit(txt_nit.getText());
+        /*cliente.setNit(txt_nit.getText());
         cliente.setNombres(txt_nombres.getText());
         cliente.setApellidos(txt_apellidos.getText());
         cliente.setDireccion(txt_direccion.getText());
@@ -225,7 +231,7 @@ DefaultTableModel tbl_modelo; // tbl_modelo sirve para llenar tbl_clientes (cont
         cliente.setFecha_nacimiento(txt_fecha_nacimiento.getText());
         
         tbl_modelo.addRow(cliente.crear());
-        tbl_clientes.setModel(tbl_modelo);
+        tbl_clientes.setModel(tbl_modelo);*/
         
     }//GEN-LAST:event_bt_crearActionPerformed
 

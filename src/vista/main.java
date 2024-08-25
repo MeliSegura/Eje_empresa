@@ -4,7 +4,7 @@
  */
 package vista;
 
-import modelo.Conexion;
+//import modelo.Conexion;
 
 /**
  *
@@ -17,12 +17,12 @@ public class main{
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        /* frm_personas frm = new frm_personas();
-        frm.show();*/
+        frm_personas frm = new frm_personas();
+        frm.show();
         
-        Conexion cn = new Conexion();
+        /*Conexion cn = new Conexion();
         cn.abrir_conexion();
-        cn.cerrar_conexion();
+        cn.cerrar_conexion();*/
         
     }
     
